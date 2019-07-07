@@ -1,0 +1,23 @@
+#Fibo series
+
+def fibo(num):
+    first = 0
+    second = 1
+    fibo = [0,1]
+    for i in range(2,num):
+        third = first + second
+        fibo.append(third)
+        first = second
+        second = third
+    return fibo
+
+while True:
+    try:
+        number = int(input("Enter the number of terms:"))
+        break
+    except ValueError:
+        print("Invalid input!! Please 9 integer")
+print("The required fibonacci series as below:")
+l_fibo = fibo(number)
+for term in l_fibo:
+    print(term,end=' ')
