@@ -1,0 +1,29 @@
+def check_prime(x):
+    for i in range(2,x):
+        if x%i ==0:
+            return False
+        else:
+            return True
+
+def find_prime_factor(num):
+    prime_fact = []
+    for i in range(1,num):
+        if num%i == 0:
+            if i ==2 or i == 3:
+                prime_fact.append(i)
+            else:
+                isprime = check_prime(i)
+                if isprime:
+                    prime_fact.append(i)
+    return prime_fact
+
+
+while True:
+    try:
+        number = int(input("Enter the number whose prime factors are to be found: "))
+        break
+    except ValueError:
+        print("Invalid input! Please enter an integer")
+prime_fact = find_prime_factor(number)
+for factor in prime_fact:
+    print(factor, end=' ')
