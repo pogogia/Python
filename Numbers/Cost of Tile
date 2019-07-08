@@ -1,0 +1,12 @@
+try:
+    print("Enter the width of the floor:")
+    width = float(input())
+    print("Enter the breadth of the floor:")
+    breadth = float(input())
+    print("Enter the rate of covering:")
+    rate = float(input())
+except ValueError:
+    print("Invalid Input!!")
+total = width * breadth * rate
+total_cost = round(total,2)
+print("Total cost of covering the floor is Rs.{}".format(total_cost))
