@@ -1,0 +1,37 @@
+def check_prime(x):
+    for i in range(2,x):
+        if x%i == 0:
+            return False
+        else:
+            continue
+    return True
+
+def find_prime():
+    global prime_fact
+    global prime
+    while True:
+        prime += 1
+        print(prime)
+        for i in range(2, prime):
+            if prime % i == 0:
+                break
+            elif  check_prime(prime):
+                prime_fact.append(prime)
+                break
+            else:
+                continue
+        break
+
+prime_fact= []
+prime = 2
+prime_fact.append(prime)
+while True:
+        ans  = input("Do you want to continue (Yes/No): ")
+        if ans.lower() == 'yes':
+            find_prime()
+        elif ans.lower() == 'no':
+            break
+        else:
+            print("Enter valid input")
+print("All the prime numbers are:")
+print(prime_fact)
