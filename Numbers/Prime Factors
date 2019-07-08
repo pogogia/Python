@@ -3,11 +3,12 @@ def check_prime(x):
         if x%i ==0:
             return False
         else:
-            return True
+            continue
+    return True
 
 def find_prime_factor(num):
     prime_fact = []
-    for i in range(1,num):
+    for i in range(2,num):
         if num%i == 0:
             if i ==2 or i == 3:
                 prime_fact.append(i)
