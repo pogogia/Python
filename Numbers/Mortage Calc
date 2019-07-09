@@ -1,0 +1,15 @@
+try:
+    print("Enter the rate of interest:")
+    rate = float(input())
+    print("Enter the total number of months for which mortage is taken:")
+    months = int(input())
+    print("Enter the mortage amount:")
+    loan = float(input())
+except ValueError:
+    print("Invalid input!!")
+
+monthly_rate = rate/100/12
+num = ((1+monthly_rate)**(months)) * monthly_rate
+den = ((1+monthly_rate)**(months)) - 1
+monthly_installment = loan * (num/den)
+print("Monthly installment of Rs.%.2f on a mortage of Rs.%.2f for a period of %s years at rate of %.2f interest is applicable." %(monthly_installment, loan, (months/12), rate))
