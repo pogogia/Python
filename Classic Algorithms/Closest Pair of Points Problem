@@ -1,6 +1,5 @@
 import math
 
-
 def closest_pair_problem(lis):
     min = math.inf
     for i in range(len(lis)):
@@ -10,12 +9,10 @@ def closest_pair_problem(lis):
                 min = dist
     print("The smallest distance between the points is {}".format(round(min,5)))
 
-
 n = int(input('Enter the number of points to be given'))
 lis = []
 for i in range(n):
     x = int(input('Enter the x  co-ordiante of point {}'.format(i)))
     y = int(input('Enter the y co-ordiante of point {}'.format(i)))
     lis.append((x,y))
-
 closest_pair_problem(lis)
